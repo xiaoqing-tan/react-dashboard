@@ -34,10 +34,6 @@ const TopBar = () => {
     dispatch(setDrawer({ drawerStatus: !drawerStatus }));
   };
 
-  const onLogout = () => {
-    navigate("/login");
-  }
-
   return (
     <AppBar
       position="static"
@@ -56,23 +52,23 @@ const TopBar = () => {
       }}
     >
       <Toolbar
-        sx={{ 
-          flexWrap: "wrap", 
-          justifyContent: "space-between", 
+        sx={{
+          flexWrap: "wrap",
+          justifyContent: "space-between",
           px: 1,
         }}
         disableGutters={true}
       >
         <IconButton onClick={onToggleAside}>
-          <Dehaze />
+          <Dehaze fontSize="small" />
         </IconButton>
         <PopupState variant="popover" popupId="demo-popup-popover">
           {(popupState) => (
             <>
               <Box {...bindHover(popupState)} sx={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}>
-                <Typography variant="body1">admin</Typography>
+                <Typography sx={{ fontSize: ".875rem" }} variant="body1">admin</Typography>
                 <IconButton>
-                  <AccountCircle />
+                  <AccountCircle fontSize="small" />
                 </IconButton>
               </Box>
               <HoverPopover
@@ -91,9 +87,9 @@ const TopBar = () => {
                     <ListItem disablePadding>
                       <ListItemButton>
                         <ListItemIcon sx={{ marginRight: 1, minWidth: 0 }}>
-                          <Inbox />
+                          <Inbox fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText primary="Inbox" />
+                        <ListItemText primaryTypographyProps={{fontSize: '.875rem'}} primary="Inbox" />
                       </ListItemButton>
                     </ListItem>
                     <ListItem
@@ -104,20 +100,21 @@ const TopBar = () => {
                     >
                       <ListItemButton>
                         <ListItemIcon sx={{ marginRight: 1, minWidth: 0 }}>
-                          <Settings />
+                          <Settings fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText primary="Configuration" />
+                        <ListItemText primaryTypographyProps={{fontSize: '.875rem'}} primary="Configuration" />
                       </ListItemButton>
                     </ListItem>
                     <ListItem
                       disablePadding
-                      onClick={ onLogout }
-                    >
+                      onClick={() => {
+                        navigate("/login");
+                      }}                    >
                       <ListItemButton>
                         <ListItemIcon sx={{ marginRight: 1, minWidth: 0 }}>
-                          <ExitToApp />
+                          <ExitToApp fontSize="small" />
                         </ListItemIcon>
-                        <ListItemText primary="Logout" />
+                        <ListItemText primaryTypographyProps={{fontSize: '.875rem'}} primary="Logout" />
                       </ListItemButton>
                     </ListItem>
                   </List>

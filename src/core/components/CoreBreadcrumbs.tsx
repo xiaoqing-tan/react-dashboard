@@ -38,25 +38,23 @@ export const CoreBreadcrumbs = () => {
 
   return (
     <Box>
-      <Breadcrumbs sx={{mb: 2}} separator="›" aria-label="breadcrumb">
+      <Breadcrumbs sx={{mb: 2}} aria-label="breadcrumb">
           { 
             breadcrumbs.map((item, index) => {
               const last = index === pathnames.length - 1;
               const to = `${pathname.split('/').slice(0, index + 1).join('/')}`;
               return !last ? (
                 <Link sx={{ display: 'flex', alignItems: 'center',  fontSize: 14 }} key={ item.name } underline="hover" component={RouterLink} to={to || '/'}>
-                  { item.icon }
                   { t(item.name!) }
                 </Link>): (
                 <Typography sx={{ display: 'flex',  alignItems: 'center', fontSize: 14 }} key={ item.name } color="text.primary">
-                  { item.icon }
                   { t(item.name!) }
                 </Typography>
                 )
             })
           }
         </Breadcrumbs>
-        <Typography variant='body1' sx={{fontSize: '20px', mb: 2, px: 2, fontWeight: 'bold' }}>{t(title)}</Typography>
+        <Typography variant='body1' sx={{fontSize: '30px', mb: 2, fontWeight: 'bold' }}>{t(title)}</Typography>
     </Box>
 
   )
