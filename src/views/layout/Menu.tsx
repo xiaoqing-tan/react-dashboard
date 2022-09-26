@@ -10,7 +10,6 @@ import MenuItemLink from './MenuItemLink';
 
 const Nav = styled(MenuList)<{ component?: React.ElementType }>({
   width: '100%',
-  padding: 8
 });
 
 const flat = (menu: RouteProps[], path?: string): RouteProps[] => {

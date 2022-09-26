@@ -57,17 +57,17 @@ export default function Index() {
       <CoreBreadcrumbs />
       <Grid container spacing={2}>
         <Grid item xs={4}>
-          <Box component={Paper} sx={{ p: 2, borderRadius: 2 }}>
+          <Box component={Paper} sx={{ p: 2, borderRadius: 1 }}>
             <Line options={options} data={data} />
           </Box>
         </Grid>
         <Grid item xs={4}>
-          <Box component={Paper} sx={{ p: 2, borderRadius: 2 }}>
+          <Box component={Paper} sx={{ p: 2, borderRadius: 1 }}>
             <Line options={options} data={data} />
           </Box>
         </Grid>
         <Grid item xs={4}>
-          <Box component={Paper} sx={{ p: 2, borderRadius: 2 }}>
+          <Box component={Paper} sx={{ p: 2, borderRadius: 1 }}>
             <Line options={options} data={data} />
           </Box>
         </Grid>

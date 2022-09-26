@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AppBar,
   Toolbar,
@@ -29,10 +28,15 @@ const TopBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { drawerStatus } = useSelector((state: any) => state.aside);
-  const theme = useTheme()
+  const theme = useTheme();
+
   const onToggleAside = () => {
     dispatch(setDrawer({ drawerStatus: !drawerStatus }));
   };
+
+  const onLogout = () => {
+    navigate("/login");
+  }
 
   return (
     <AppBar
@@ -52,7 +56,12 @@ const TopBar = () => {
       }}
     >
       <Toolbar
-        sx={{ flexWrap: "wrap", justifyContent: "space-between" }}
+        sx={{ 
+          flexWrap: "wrap", 
+          justifyContent: "space-between", 
+          px: 1,
+        }}
+        disableGutters={true}
       >
         <IconButton onClick={onToggleAside}>
           <Dehaze />
@@ -102,9 +111,7 @@ const TopBar = () => {
                     </ListItem>
                     <ListItem
                       disablePadding
-                      onClick={() => {
-                        navigate("/login");
-                      }}
+                      onClick={ onLogout }
                     >
                       <ListItemButton>
                         <ListItemIcon sx={{ marginRight: 1, minWidth: 0 }}>

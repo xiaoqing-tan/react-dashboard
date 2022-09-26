@@ -41,7 +41,7 @@ const Configuration = () => {
       <Box
         sx={{ 
           p: 3, 
-          borderRadius: 2 
+          borderRadius: 2
         }}
         elevation={0}
         component={Paper}
@@ -57,12 +57,12 @@ const Configuration = () => {
                   <RadioGroup row aria-labelledby="demo-theme" {...field}>
                     <FormControlLabel
                       value="light"
-                      control={<Radio />}
+                      control={<Radio size="small" />}
                       label="Light"
                     />
                     <FormControlLabel
                       value="dark"
-                      control={<Radio />}
+                      control={<Radio size="small" />}
                       label="Dark"
                     />
                   </RadioGroup>
@@ -80,12 +80,12 @@ const Configuration = () => {
                   <RadioGroup row aria-labelledby="demo-lang" {...field}>
                     <FormControlLabel
                       value="en"
-                      control={<Radio />}
+                      control={<Radio size="small" />}
                       label="English"
                     />
                     <FormControlLabel
                       value="zh"
-                      control={<Radio />}
+                      control={<Radio size="small" />}
                       label="中文"
                     />
                   </RadioGroup>
@@ -94,7 +94,7 @@ const Configuration = () => {
             </FormControl>
           </Box>
           <Box sx={{pt: 2}}>
-            <Button type="submit" size="large" variant="contained">
+            <Button type="submit" size="medium" variant="contained">
               Confirm
             </Button>
           </Box>

@@ -5,7 +5,7 @@ const config = {
   light: {
     text: {
       primary: "#122336",
-      secondary: "#2b6be8",
+      secondary: "#064187",
       disabled: "#999",
     },
     common: {
@@ -13,14 +13,14 @@ const config = {
       white: "#ccc",
     },
     primary: {
-      main: "#2b6be8",
+      main: "#064187",
     },
     secondary: {
       main: "#fff",
     },
     background: {
       paper: "#fff",
-      default: "#f3f3f3",
+      default: "#f7f7f7",
     },
     divider: "#eee",
   },
@@ -40,10 +40,10 @@ const config = {
       main: "#fff",
     },
     background: {
-      paper: "#111936",
-      default: "#212946",
+      paper: "#111",
+      default: "#222",
     },
-    divider: "#2c3548",
+    divider: "#333",
   },
 };
 

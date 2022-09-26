@@ -37,8 +37,8 @@ export const CoreBreadcrumbs = () => {
   const title = useMemo(() => breadcrumbs[breadcrumbs.length - 1].name!, [breadcrumbs])
 
   return (
-    <Box sx={{mb: 1}}>
-      <Breadcrumbs sx={{mb: 1}} separator="›" aria-label="breadcrumb">
+    <Box>
+      <Breadcrumbs sx={{mb: 2}} separator="›" aria-label="breadcrumb">
           { 
             breadcrumbs.map((item, index) => {
               const last = index === pathnames.length - 1;
@@ -56,7 +56,7 @@ export const CoreBreadcrumbs = () => {
             })
           }
         </Breadcrumbs>
-        <Typography variant='body1' sx={{fontSize: '24px', px: 2, fontWeight: 'bold'}}>{t(title)}</Typography>
+        <Typography variant='body1' sx={{fontSize: '20px', mb: 2, px: 2, fontWeight: 'bold' }}>{t(title)}</Typography>
     </Box>
 
   )

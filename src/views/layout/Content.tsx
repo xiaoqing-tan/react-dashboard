@@ -10,7 +10,7 @@ const Content = ({ children }: ContentProps) => {
     <Box sx={{ 
       width: '100%', 
       flexGrow: 1,
-      px: 3,
+      px: 2,
       pt: 10.5,
       pb: 2.5,
       minHeight: '100vh'

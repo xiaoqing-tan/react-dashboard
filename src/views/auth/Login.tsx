@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { Container, Box, Typography, TextField, Button } from "@mui/material";
 import { ChildCare } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
-import { useLogin } from "../../core";
+import { useLogin, useTheme } from "../../core";
 import { services } from "../../services";
+import themeConfig from '../../core/theme/configs';
 
 const StyledLink = styled(Link)({
   "&:hover": {
@@ -45,6 +46,13 @@ export default function Login() {
       setStatus(false);
     });
   };
+
+
+  const [theme, setTheme] = useTheme();
+
+  useEffect(() => {
+    setTheme({ name: 'light', theme: themeConfig('light') });
+  })
 
   return (
     <Container

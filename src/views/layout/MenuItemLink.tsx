@@ -23,7 +23,7 @@ const childStyle = (theme: Theme, level?: number) => {
     "&.MuiMenuItem-root": {
       padding: `12px ${level ? '44px' : '18px'}`,
       margin: '0 0 4px 0',
-      borderRadius: 8,
+      // borderRadius: 8,
     }
   }
 };
@@ -32,7 +32,7 @@ const parentStyle = (theme: Theme) => ({
   "&.MuiMenuItem-root": {
     padding: "12px 18px",
     margin: '0 0 4px 0',
-    borderRadius: 8,
+    // borderRadius: 8,
     backgroundColor: "transparent",
     transition: theme.transitions.create('background-color', {
       easing: theme.transitions.easing.easeIn,
@@ -65,11 +65,6 @@ const StyledMenuItem = styled(MenuItem, {
     },
     "& .MuiTypography-root": {
       fontSize: "0.875rem",
-    },
-    "&.Mui-selected": {
-      "& .MuiListItemIcon-root, & .MuiTypography-root": {
-        fontWeight: 600,
-      }
     },
     "&.Mui-selected, &:hover": {
       "& .MuiListItemIcon-root, & .MuiTypography-root": {

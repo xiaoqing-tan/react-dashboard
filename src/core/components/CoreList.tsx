@@ -61,7 +61,7 @@ export const CoreList = ({
     <Box
       sx={{
         p: 3,
-        borderRadius: 3,
+        borderRadius: 2,
         boxSizing: "border-box",
         mb: 2,
       }}

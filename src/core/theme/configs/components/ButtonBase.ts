@@ -12,6 +12,11 @@ export default function ButtonBase(theme: ThemeOptions) {
       defaultProps: {
         disableElevation: true
       },
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize'
+        }
+      }
     }
   }
 }
